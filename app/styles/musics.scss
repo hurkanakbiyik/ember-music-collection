@@ -1,0 +1,114 @@
+.albums{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  .albums-area{
+    max-width: 1280px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    .album{
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 8px;
+      cursor: pointer;
+      color: inherit;
+      text-decoration: inherit;
+      min-height: 320px;
+      .album-info{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 4px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: #2e2928;
+        &:hover{
+          box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2), 0px 8px 8px 0 rgba(0, 0, 0, 0.2);
+          .album-head .play-area{
+            display: block;
+          }
+        }
+        .album-head{
+          flex: 1;
+          width: 100%;
+          display: flex;
+          .play-area{
+            display: none;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            span{
+              color: #fff;
+              font-size: 25px;
+              background-color: #0000005c;
+              font-weight: bold;
+              padding: 2px 8px;            }
+          }
+          img{
+            border-radius: 4px 4px 0 0;
+            flex: 1;
+          }
+        }
+        .album-detail{
+          flex: 1;
+          padding: 4px 4px;
+          text-align: center;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          .album-name{
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+          }
+          .author-name{
+            font-size: 16px;
+            color:#b4b4b4;
+          }
+          .album-year{
+            font-size: 14px;
+            color:#fff;
+          }
+          .album-genres{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span{
+              padding: 2px 4px;
+              margin-right: 2px;
+              background-color: #fff;
+              color: #000;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .fab-action-button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    display: block;
+    width: 56px;
+    height: 56px;
+    background-color: #000;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    i{
+      color: #fff;
+    }
+  }
+}

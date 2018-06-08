@@ -7,6 +7,13 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('musics', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: ':music_id/edit'
+    });
+  });
 });
 
 export default Router;

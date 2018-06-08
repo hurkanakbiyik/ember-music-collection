@@ -1,0 +1,31 @@
+<div class="albums">
+  <div class="albums-area">
+    {{#each model as |music|}}
+      <a href="/musics/{{music.id}}/edit" class="album roll-in-left">
+        <div class="album-info">
+          <div class="album-head">
+            <div class="play-area">
+              <span>PLAY</span>
+            </div>
+            <img src="{{music.image}}">
+          </div>
+          <div class="album-detail">
+            <span class="album-name">{{music.albumName}}</span>
+            <span class="author-name">{{music.authorName}}</span>
+            <span class="album-year">{{music.year}}</span>
+            <div class="album-genres">
+            {{#each music.genres as |genre|}}
+              <span>{{genre}}</span>
+            {{/each}}
+            </div>
+          </div>
+        </div>
+      </a>
+    {{/each}}
+  </div>
+  {{#link-to 'musics.new'}}
+  <button class="fab-action-button">
+    {{material-icon "add"}}
+  </button>
+  {{/link-to}}
+</div>
